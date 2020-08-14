@@ -1,0 +1,3 @@
+[submodule "moz-idb-edit"]
+	path = moz-idb-edit
+	url = https://gitlab.com/ntninja/moz-idb-edit.git
