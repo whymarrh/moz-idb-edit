@@ -1,0 +1,13 @@
+diff --git a/mozserial.py b/mozserial.py
+index cbb0742..3c80cb7 100644
+--- a/mozserial.py
++++ b/mozserial.py
+@@ -449,7 +449,7 @@ class Reader:
+ 			return False, None
+ 		
+ 		elif tag == DataType.UNDEFINED:
+-			return False, NotImplemented
++			return False, None
+ 		
+ 		elif tag == DataType.INT32:
+ 			if data > 0x7FFFFFFF:

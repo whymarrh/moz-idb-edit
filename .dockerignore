@@ -1,0 +1,4 @@
+*
+!/entrypoint.diff
+!/moz-idb-edit/
+!/mozserial.py.diff

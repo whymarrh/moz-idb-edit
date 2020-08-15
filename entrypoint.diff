@@ -1,0 +1,23 @@
+--- entrypoint	2020-08-14 21:16:30.000000000 -0230
++++ entrypoint	2020-08-14 21:55:48.000000000 -0230
+@@ -15,6 +15,8 @@
+ import sys
+ import typing
+ 
++sys.path.append('moz-idb-edit')
++
+ import mozidb
+ 
+ __dir__ = pathlib.Path(__file__).parent
+@@ -141,10 +143,8 @@
+ 		db_path = args.profile / "storage" / "default" / origin_label	
+ 		db_path = db_path / "idb" / "3647222921wleabcEoxlt-eengsairo.sqlite"
+ 	
+-	print(f"Using database path: {db_path}")
+-	
+ 	with mozidb.IndexedDB(db_path) as conn:
+-		pprint.pprint(conn.read_object(args.key_name))
++		print(json.dumps(conn.read_object(args.key_name)))
+ 	
+ 	return 0
+ 
